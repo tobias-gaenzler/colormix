@@ -30,4 +30,4 @@ doc/api/
 *.iml
 
 # Allow
-!web/main.dart.js
+!web/compiled_main.dart.js

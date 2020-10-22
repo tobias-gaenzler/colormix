@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:colormix/colormix.dart';
+import 'package:colormix/colorwheel.dart';
 
 ColorWheel colorWheel = ColorWheel();
 ColorMixer colorMixer = ColorMixer();
