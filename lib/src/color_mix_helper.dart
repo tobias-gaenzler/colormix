@@ -7,18 +7,20 @@ class ColorMixHelper {
   /// which can be used as background color for a canvas (html)
   static String toRGBString(Vector3 color) {
     return 'rgb(' +
-        color.r.round().toString() +
+        color[0].round().toString() +
         ',' +
-        color.y.round().toString() +
+        color[1].round().toString() +
         ',' +
-        color.b.round().toString() +
+        color[2].round().toString() +
         ')';
   }
 
+  /// Convenience method which round each value of a vector
+  /// Uses roundToDouble since Vector3 does not accept integers
   static Vector3 roundToDouble(Vector3 vector) {
-    vector.x = vector.x.roundToDouble();
-    vector.y = vector.y.roundToDouble();
-    vector.z = vector.z.roundToDouble();
+    vector[0] = vector[0].roundToDouble();
+    vector[1] = vector[1].roundToDouble();
+    vector[2] = vector[2].roundToDouble();
     return vector;
   }
 }
