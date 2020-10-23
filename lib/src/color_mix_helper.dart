@@ -14,13 +14,4 @@ class ColorMixHelper {
         color[2].round().toString() +
         ')';
   }
-
-  /// Convenience method which round each value of a vector
-  /// Uses roundToDouble since Vector3 does not accept integers
-  static Vector3 roundToDouble(Vector3 vector) {
-    vector[0] = vector[0].roundToDouble();
-    vector[1] = vector[1].roundToDouble();
-    vector[2] = vector[2].roundToDouble();
-    return vector;
-  }
 }

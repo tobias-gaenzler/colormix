@@ -1,5 +1,4 @@
 import 'package:vector_math/vector_math.dart';
-import 'color_mix_helper.dart';
 
 /// Convert colors from RedYellowBlue (RYB) color space to RedGreenBlue (RGB) color space.
 /// See also https://en.wikipedia.org/wiki/Subtractive_color#RYB
@@ -33,6 +32,7 @@ class RYB2RGB {
           _black[i] * r * b * y);
     }
     result.scale(255.0);
-    return ColorMixHelper.roundToDouble(result);
+    result.round();
+    return result;
   }
 }

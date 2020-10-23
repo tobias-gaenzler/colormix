@@ -14,11 +14,4 @@ void main() {
       expect(ColorMixHelper.toRGBString(color), equals('rgb(14,2,255)'));
     });
   });
-  group('ColorMixHelper.round()', () {
-    test('ColorMixHelper.round(color) rounds color values to integers', () {
-      var color = Vector3(14.3423423, 1.7423423, 254.500);
-      expect(ColorMixHelper.roundToDouble(color),
-          equals(Vector3(14.0, 2.0, 255.0)));
-    });
-  });
 }
