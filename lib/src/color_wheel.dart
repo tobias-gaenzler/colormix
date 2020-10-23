@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'dart:math';
 
+import 'package:colormix/colormix.dart';
 import 'package:vector_math/vector_math.dart';
 
 import 'color_mix_helper.dart';
@@ -28,8 +29,7 @@ class ColorWheel {
       context.moveTo(x, y);
       context.arc(x, y, radius, startAngle, endAngle, false);
       context.closePath();
-      var rgbColor =
-          RYB2RGB.ryb2rgb(ColorMixHelper.hslToRyb(angle / 360.0, 1.0, 0.5));
+      var rgbColor = RYB2RGB.ryb2rgb(HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5));
       context.fillStyle = ColorMixHelper.toRGBString(rgbColor);
       context.fill();
     }
@@ -53,7 +53,7 @@ class ColorWheel {
     angle = (angle / SEGMENT_ANGLE).floor() * SEGMENT_ANGLE;
 
     // calculate rgb value of clicked segment
-    return ColorMixHelper.hslToRyb(angle / 360.0, 1.0, 0.5);
+    return HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5);
   }
 
   void setNumberOfColors(int numColors) {

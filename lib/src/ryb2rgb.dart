@@ -33,6 +33,6 @@ class RYB2RGB {
           _black[i] * r * b * y);
     }
     result.scale(255.0);
-    return ColorMixHelper.round(result);
+    return ColorMixHelper.roundToDouble(result);
   }
 }
