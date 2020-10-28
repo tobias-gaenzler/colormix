@@ -4,9 +4,6 @@ import 'dart:math';
 import 'package:colormix/colormix.dart';
 import 'package:vector_math/vector_math.dart';
 
-import 'color_mix_helper.dart';
-import 'ryb2rgb.dart';
-
 class ColorWheel {
   static double SEGMENT_ANGLE = 60.0;
   Rectangle _containingRect;
