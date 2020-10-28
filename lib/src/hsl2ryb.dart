@@ -23,7 +23,7 @@ class HSL2RYB {
       b = _hue2ryb(p, q, h - 1.0 / 3.0);
     }
     var result = Vector3(r, g, b);
-    result.scale(256.0);
+    result.scale(255.0);
     return result;
   }
 
