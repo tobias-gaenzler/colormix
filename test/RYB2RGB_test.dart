@@ -1,3 +1,5 @@
+@TestOn('vm')
+
 import 'package:test/test.dart';
 import 'package:colormix/colormix.dart';
 import 'package:vector_math/vector_math.dart';
