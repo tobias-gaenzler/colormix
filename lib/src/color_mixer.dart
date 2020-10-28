@@ -12,12 +12,11 @@ class ColorMixer {
   Vector3 mix(Vector3 ryb) {
     _total.add(ryb);
     var t = max(_total.r, max(_total.y, _total.b));
-    if (t >= 256.0) {
-      t = 256.0 / t;
+    if (t >= 255.0) {
+      t = 255.0 / t;
     } else {
       t = 1.0;
     }
-    ;
     var clone = _total.clone();
     clone.scale(t);
     return clone;
@@ -25,5 +24,9 @@ class ColorMixer {
 
   void reset() {
     _total = Vector3.zero();
+  }
+
+  Vector3 mixResult() {
+    return _total;
   }
 }
