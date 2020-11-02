@@ -18,7 +18,6 @@ void main() {
     // yellow
     mouseEvent = MouseEvent('click', clientX: 0, clientY: 0);
     result = colorWheel.getSelectedColor(mouseEvent);
-    print(result);
     expect(result, equals(Vector3(0, 255, 0)));
     // blue
     mouseEvent = MouseEvent('click', clientX: 150, clientY: 75);
