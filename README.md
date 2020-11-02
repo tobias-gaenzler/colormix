@@ -23,3 +23,7 @@ and use
 
 That will open a chrome browser with the app.
 
+You can execute tests:
+>   pub run test -p vm test (for unit tests)
+>   pub run test -p chrome test (for tests with web browser )
+
