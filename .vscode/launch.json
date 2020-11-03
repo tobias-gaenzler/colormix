@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "browser-tests",
+            "request": "launch",
+            "type": "dart",
+            "program": "test/",
+            "args": [
+                "-p",
+                "chrome"
+            ]
+        },
+        {
             "name": "colormix",
             "request": "launch",
             "type": "dart",
