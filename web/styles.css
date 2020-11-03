@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
-
 html, body {
   width: 100%;
   height: 100%;
@@ -8,7 +7,35 @@ html, body {
   font-family: 'Roboto', sans-serif;
   background-color: #F8F8F8;
   font-size: 14px;
-  margin: 15px;
+}
+#header {
+  margin: auto;
+  width: 50%;
+}
+#content {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#title {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bolder;
+  vertical-align: middle;
+  color:  rgba(0, 0, 0, 0.5);
+}
+
+#options {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+#numberOfColorsInColorWheel {
+  border-color: white;
+  border-radius: 25px;
+  color:  rgba(0, 0, 0, 0.5);
 }
 
 #output {
@@ -16,48 +43,50 @@ html, body {
   text-align: center;
 }
 
-h1, p {
-  color: #333;
-}
-
-.table .palette {
-  display: table;
-  width: auto;
-}
-
-.tableRow {
-  display: table-row;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.tableCell {
-  display: table-cell;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: middle;
+#paintarea {
+  padding-top: 15px;
 }
 
 #colorWheel {
   border: 1px;
-  border-style:solid;
+  border-style: solid;
   border-color: lightgrey;
   border-radius: 150px;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 15px;
 }
 
-
 #resultColor {
-  width: 170px;
-  height: 160px;
-  border: 1px solid #ccc;
-  margin: 0px auto;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: white;
+  line-height: 250px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2em;
 }
 
 .result {
   align-content: center;
-  height: 300px;
-  width: 200px;
+  width: 100%;
   text-align: center;
 }
 
+#resetButton {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
+  background: rgba(158,158,158,.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  border-radius: 5px;
+  color:  rgba(0, 0, 0, 0.5);
+  padding: 0 16px;
+  text-transform: uppercase;
+  line-height: normal;
+  vertical-align: middle;
+}

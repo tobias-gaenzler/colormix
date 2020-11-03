@@ -43,7 +43,8 @@ class MainView {
   void _reset() {
     querySelector('#$_resultElementId').style.backgroundColor =
         ColorMixHelper.toRGBString(ColorMixHelper.WHITE);
-    querySelector('#$_resultElementId').text = '';
+    querySelector('#$_resultElementId').text = 'Result';
     _colorMixer.reset();
+    _setNumberOfColors();
   }
 }

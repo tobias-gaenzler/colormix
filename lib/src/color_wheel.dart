@@ -39,6 +39,13 @@ class ColorWheel {
     var y = (e.client.y -
         (_containingRect.top).round() -
         _containingRect.height / 2.0);
+    print('x: $e.client.x');
+    window.console.error('x: $e.client.x');
+    window.console.error('hello');
+    print('y: $e.client.y');
+    print('left: $_containingRect.left');
+    print('top: $_containingRect.top');
+    print('width: $_containingRect.width');
 
     // get angle of clicked segment
     var angle = atan2(y, x) * radians2Degrees;
