@@ -8,7 +8,7 @@ This simple algorithm just adds color values in the RYB color space, e.g. (atten
 >   blue (0, 0, 255) + yellow (0, 255, 0) = green (0, 255, 255)
 
 ## Quick Start
-Clone the repo and open [web/index.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index.html)
+Clone the repo and open [web/index_standalone.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index_standalone.html)
 in your browser.
 
 ### Usage

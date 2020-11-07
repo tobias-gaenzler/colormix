@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>Color Mix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="compiled_main.dart.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <div id="title">Color Mix</div>
+            <div id="options">
+                <select class="select" id="numberOfColorsInColorWheel" title="Set number of colors in color wheel.">
+                    <option value="3">three colors</option>
+                    <option value="6" selected="selected">six colors</option>
+                    <option value="12">12 colors</option>
+                    <option value="24">24 colors</option>
+                    <option value="48">48 colors</option>
+                    <option value="96">96 colors</option>
+                    <option value="192">192 colors</option>
+                    <option value="360">360 colors</option>
+                </select>
+            </div>
+            <div id="resetButton">Reset</div>
+        </div>
+        <div id="paintarea">
+            <div class="result">
+                <div id="resultColor" title="Color mix result.">Result</div>
+            </div>
+            <canvas title="Click on any color to add this color to the mix." class="tableCell" id="colorWheel"
+                width="300px" height="300px"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>
