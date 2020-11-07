@@ -6,7 +6,6 @@ import 'package:colormix/colorwheel.dart';
 class MainView {
   final ColorWheel _colorWheel = ColorWheel();
   final ColorMixer _colorMixer = ColorMixer();
-  final String _resultElementId = 'resultColor';
 
   ColorWheel createColorWheel() {
     _colorWheel.create(querySelector('#colorWheel'));
@@ -34,17 +33,16 @@ class MainView {
   void _addColor(e) {
     var selectedColor = _colorWheel.getSelectedColor(e);
     var mix = _colorMixer.mix(selectedColor);
-    querySelector('#$_resultElementId').style.backgroundColor =
+    querySelector('#resultColor').style.backgroundColor =
         ColorMixHelper.toRGBString(RYB2RGB.ryb2rgb(mix));
-    querySelector('#$_resultElementId').text =
+    querySelector('#resultColor').text =
         ColorMixHelper.toRGBString(RYB2RGB.ryb2rgb(mix));
   }
 
   void _reset() {
-    querySelector('#$_resultElementId').style.backgroundColor =
+    querySelector('#resultColor').style.backgroundColor =
         ColorMixHelper.toRGBString(ColorMixHelper.WHITE);
-    querySelector('#$_resultElementId').text = 'Result';
+    querySelector('#resultColor').text = 'Result';
     _colorMixer.reset();
-    _setNumberOfColors();
   }
 }
