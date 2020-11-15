@@ -1,3 +1,4 @@
+# build with e.g. docker build -t "colormix:Dockerfile" .
 FROM google/dart
 
 RUN pub global activate webdev && \
