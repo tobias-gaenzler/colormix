@@ -15,7 +15,7 @@ in your browser.
 Clicking one of the colors in the color wheel adds the color to the result.
 You restart by clicking *Reset*.
 Alternative: docker container
-* run docker container [link todo]() (currently the *webdev serve --hostname 0.0.0.0* is picking its arguments correctly in entrypoint and hence the app is not reachable from outside the container)
+* run docker container [link todo]() (currently the *webdev serve --hostname 0.0.0.0* is picking its arguments incorrectly in entrypoint and hence the app is not reachable from outside the container)
 
 ## Development
 Setup your local development environment for dart (see e.g. [Dart Web deployment](https://dart.dev/web/deployment) ).
