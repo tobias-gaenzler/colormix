@@ -11,14 +11,20 @@ This simple algorithm just adds color values in the RYB color space, e.g. (atten
 Clone the repo and open [web/index_standalone.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index_standalone.html)
 in your browser.
 
-### Usage
+Alternative: run via *docker* (only works in *chrome*)
+```
+docker pull tobiasgaenzler/colormix
+docker run -i -p 8080:8080 colormix:1.0 
+open http://localhost:8080 in chrome
+```
+
+### App Usage
 Clicking one of the colors in the color wheel adds the color to the result.
 You restart by clicking *Reset*.
-Alternative: docker container
-* run docker container [link todo]() (currently the *webdev serve --hostname 0.0.0.0* is picking its arguments incorrectly in entrypoint and hence the app is not reachable from outside the container)
 
 ## Development
 Setup your local development environment for dart (see e.g. [Dart Web deployment](https://dart.dev/web/deployment) ).
+
 Clone the repo and either import the project in your favorite IDE (Intellij Idea, VSC) or use the command line:
 * pub get
 * webdev serve 
