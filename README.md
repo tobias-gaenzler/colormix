@@ -16,6 +16,7 @@ Clicking one of the colors in the color wheel adds the color to the result.
 You restart by clicking *Reset*.
 
 ## Development
+Setup your local development environment for dart (see e.g. [Dart Web deployment](https://dart.dev/web/deployment) ).
 Clone the repo and either import the project in your favorite IDE (Intellij Idea, VSC) or use the command line:
 * pub get
 * webdev serve 
