@@ -16,14 +16,16 @@ Clicking one of the colors in the color wheel adds the color to the result.
 You restart by clicking *Reset*.
 
 ## Development
-Clone the repo, import the project in your favorite IDE (Intellij Idea, VSC) 
-and use 
+Clone the repo and either import the project in your favorite IDE (Intellij Idea, VSC) or use the command line:
 * pub get
 * webdev serve 
 
 That will open a chrome browser with the app.
 
-You can execute tests:
->   pub run test -p vm test (for unit tests)
->   pub run test -p chrome test (for tests with web browser )
+### Executing tests
+You can execute unit tests:
+>  pub run test -p vm test
+
+or web tests (browser)
+>   pub run test -p chrome test
 
