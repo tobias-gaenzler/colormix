@@ -8,12 +8,12 @@ import 'package:colormix/colorwheel.dart';
 /// Test the color wheel painted on the canvas by checking the colors returned when clicked on certain segments
 void main() {
   test('ColorWheel displays red, yellow, blue in RYB color space', () {
-    var colorWheel = ColorWheel();
+    ColorWheel colorWheel = ColorWheel();
     colorWheel.setNumberOfColors(3);
     colorWheel.create(querySelector('#colorWheel'));
     // red
-    var mouseEvent = MouseEvent('click', clientX: 200, clientY: 200);
-    var result = colorWheel.getSelectedColor(mouseEvent);
+    MouseEvent mouseEvent = MouseEvent('click', clientX: 200, clientY: 200);
+    Vector3 result = colorWheel.getSelectedColor(mouseEvent);
     expect(result, equals(Vector3(255, 0, 0)));
     // yellow
     mouseEvent = MouseEvent('click', clientX: 0, clientY: 0);

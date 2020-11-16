@@ -17,12 +17,12 @@ class HSL2RYB {
       r = g = b = l; // achromatic
     } else {
       double q = l < 0.5 ? l * (1.0 + s) : l + s - l * s;
-      var p = 2.0 * l - q;
+      double p = 2.0 * l - q;
       r = _hue2ryb(p, q, h + 1.0 / 3.0);
       g = _hue2ryb(p, q, h);
       b = _hue2ryb(p, q, h - 1.0 / 3.0);
     }
-    var result = Vector3(r, g, b);
+    Vector3 result = Vector3(r, g, b);
     result.scale(255.0);
     return result;
   }

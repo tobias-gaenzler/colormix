@@ -14,14 +14,14 @@ class RYB2RGB {
 
   ///
   static Vector3 ryb2rgb(Vector3 ryb) {
-    var rgb = ryb.clone();
+    Vector3 rgb = ryb.clone();
     rgb.scale(1.0 / 255.0);
-    var result = Vector3.zero();
-    var r = rgb.r;
-    var y = rgb.y;
-    var b = rgb.b;
+    Vector3 result = Vector3.zero();
+    double r = rgb.r;
+    double y = rgb.y;
+    double b = rgb.b;
 
-    for (var i = 0; i <= 2; i = ++i) {
+    for (int i = 0; i <= 2; i = ++i) {
       result[i] = (_white[i] * (1.0 - r) * (1.0 - b) * (1.0 - y) +
           _red[i] * r * (1.0 - b) * (1 - y) +
           _blue[i] * (1.0 - r) * b * (1.0 - y) +

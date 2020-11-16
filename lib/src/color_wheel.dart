@@ -15,40 +15,34 @@ class ColorWheel {
   }
 
   void _fillColorWheel(CanvasElement canvas, CanvasRenderingContext2D context) {
-    var x = canvas.width / 2;
-    var y = canvas.height / 2;
-    var radius = canvas.width / 2.0;
+    double x = canvas.width / 2;
+    double y = canvas.height / 2;
+    double radius = canvas.width / 2.0;
 
-    for (var angle = 0.0; angle < 360.0; angle += SEGMENT_ANGLE) {
-      var startAngle = (angle) * pi / 180.0;
-      var endAngle = (angle + SEGMENT_ANGLE) * pi / 180.0;
+    for (double angle = 0.0; angle < 360.0; angle += SEGMENT_ANGLE) {
+      double startAngle = (angle) * pi / 180.0;
+      double endAngle = (angle + SEGMENT_ANGLE) * pi / 180.0;
       context.beginPath();
       context.moveTo(x, y);
       context.arc(x, y, radius, startAngle, endAngle, false);
       context.closePath();
-      var rgbColor = RYB2RGB.ryb2rgb(HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5));
+      Vector3 rgbColor =
+          RYB2RGB.ryb2rgb(HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5));
       context.fillStyle = ColorMixHelper.toRGBString(rgbColor);
       context.fill();
     }
   }
 
   Vector3 getSelectedColor(MouseEvent e) {
-    var x = (e.client.x -
+    double x = (e.client.x -
         (_containingRect.left).round() -
         _containingRect.width / 2.0);
-    var y = (e.client.y -
+    double y = (e.client.y -
         (_containingRect.top).round() -
         _containingRect.height / 2.0);
-    print('x: $e.client.x');
-    window.console.error('x: $e.client.x');
-    window.console.error('hello');
-    print('y: $e.client.y');
-    print('left: $_containingRect.left');
-    print('top: $_containingRect.top');
-    print('width: $_containingRect.width');
 
     // get angle of clicked segment
-    var angle = atan2(y, x) * radians2Degrees;
+    double angle = atan2(y, x) * radians2Degrees;
     if (angle < 0) {
       angle += 360;
     }

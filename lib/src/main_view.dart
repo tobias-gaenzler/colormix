@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:colormix/colormix.dart';
 import 'package:colormix/colorwheel.dart';
+import 'package:vector_math/vector_math.dart';
 
 class MainView {
   final ColorWheel _colorWheel = ColorWheel();
@@ -13,13 +14,13 @@ class MainView {
   }
 
   void addListener() {
-    querySelector('#colorWheel').onClick.listen((e) {
+    querySelector('#colorWheel').onClick.listen((MouseEvent e) {
       _addColor(e);
     });
     querySelector('#resetButton').onClick.listen((e) {
       _reset();
     });
-    querySelector('#numberOfColorsInColorWheel').onChange.listen((e) {
+    querySelector('#numberOfColorsInColorWheel').onChange.listen((Event e) {
       _setNumberOfColors();
     });
   }
@@ -30,9 +31,9 @@ class MainView {
     _colorWheel.create(querySelector('#colorWheel'));
   }
 
-  void _addColor(e) {
-    var selectedColor = _colorWheel.getSelectedColor(e);
-    var mix = _colorMixer.mix(selectedColor);
+  void _addColor(MouseEvent e) {
+    Vector3 selectedColor = _colorWheel.getSelectedColor(e);
+    Vector3 mix = _colorMixer.mix(selectedColor);
     querySelector('#resultColor').style.backgroundColor =
         ColorMixHelper.toRGBString(RYB2RGB.ryb2rgb(mix));
     querySelector('#resultColor').text =
