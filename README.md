@@ -13,9 +13,9 @@ in your browser.
 
 Alternative: run via *docker* (only works in *chrome*)
 ```
-docker pull tobiasgaenzler/colormix
-docker run -i -p 8080:8080 colormix:1.0 
-open http://localhost:8080 in chrome
+docker pull tobiasgaenzler/colormix:1.0
+docker run -i -p 8080:8080 tobiasgaenzler/colormix:1.0 
+open http://localhost:8080 in chrome (wait some time ...)
 ```
 
 ### App Usage
