@@ -36,7 +36,8 @@ class MainView {
     Vector3 mix = _colorMixer.mix(selectedColor);
     querySelector('#resultColor').style.backgroundColor =
         ColorMixHelper.toRGBString(RYB2RGB.convert(mix));
-    querySelector('#resultColor').text =
+    querySelector('#resultColor').text = '';
+    querySelector('#resultColor').title =
         ColorMixHelper.toRGBString(RYB2RGB.convert(mix));
   }
 
