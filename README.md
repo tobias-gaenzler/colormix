@@ -8,15 +8,16 @@ This simple algorithm just adds color values in the RYB color space, e.g. (atten
 >   blue (0, 0, 255) + yellow (0, 255, 0) = green (0, 255, 255)
 
 ## Quick Start
-Clone the repo and open [web/index_standalone.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index_standalone.html)
+* Clone the repo and open [web/index_standalone.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index_standalone.html)
 in your browser.
+* Alternative: download and unpack [colormix_1.0.zip](https://github.com/tobias-gaenzler/colormix/releases/tag/1.0) from the release and open [index_standalone.html](https://github.com/tobias-gaenzler/colormix/blob/main/web/index_standalone.html) in your browser
+* Alternative: run via *Docker* 
+    ```
+    docker pull tobiasgaenzler/colormix:1.0
+    docker run -i -p 8080:8080 tobiasgaenzler/colormix:1.0 
+    open http://localhost:8080 in your browser (wait some time, try *chrome* if it does not work in your browser ...)
+    ```
 
-Alternative: run via *docker* (only works in *chrome*)
-```
-docker pull tobiasgaenzler/colormix:1.0
-docker run -i -p 8080:8080 tobiasgaenzler/colormix:1.0 
-open http://localhost:8080 in chrome (wait some time ...)
-```
 
 ### App Usage
 Clicking one of the colors in the color wheel adds the color to the result.
