@@ -27,7 +27,7 @@ class ColorWheel {
       context.arc(x, y, radius, startAngle, endAngle, false);
       context.closePath();
       Vector3 rgbColor =
-          RYB2RGB.ryb2rgb(HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5));
+          RYB2RGB.convert(HSL2RYB.convert(angle / 360.0, 1.0, 0.5));
       context.fillStyle = ColorMixHelper.toRGBString(rgbColor);
       context.fill();
     }
@@ -51,7 +51,7 @@ class ColorWheel {
     angle = (angle / SEGMENT_ANGLE).floor() * SEGMENT_ANGLE;
 
     // calculate rgb value of clicked segment
-    return HSL2RYB.hslToRyb(angle / 360.0, 1.0, 0.5);
+    return HSL2RYB.convert(angle / 360.0, 1.0, 0.5);
   }
 
   void setNumberOfColors(int numColors) {

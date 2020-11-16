@@ -13,7 +13,7 @@ class RYB2RGB {
   static final Vector3 _black = Vector3(0.2, 0.094, 0.0);
 
   ///
-  static Vector3 ryb2rgb(Vector3 ryb) {
+  static Vector3 convert(Vector3 ryb) {
     Vector3 rgb = ryb.clone();
     rgb.scale(1.0 / 255.0);
     Vector3 result = Vector3.zero();

@@ -35,9 +35,9 @@ class MainView {
     Vector3 selectedColor = _colorWheel.getSelectedColor(e);
     Vector3 mix = _colorMixer.mix(selectedColor);
     querySelector('#resultColor').style.backgroundColor =
-        ColorMixHelper.toRGBString(RYB2RGB.ryb2rgb(mix));
+        ColorMixHelper.toRGBString(RYB2RGB.convert(mix));
     querySelector('#resultColor').text =
-        ColorMixHelper.toRGBString(RYB2RGB.ryb2rgb(mix));
+        ColorMixHelper.toRGBString(RYB2RGB.convert(mix));
   }
 
   void _reset() {
