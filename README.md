@@ -1,6 +1,6 @@
 # Colormix
 
-![Screenshot](https://github.com/tobias-gaenzler/colormix/blob/master/colormix.jpg?raw=true)
+![Screenshot](colormix.jpg)
 
 
 ## Introduction
