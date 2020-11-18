@@ -1,7 +1,4 @@
-# Colormix
-
 ![Screenshot](colormix.jpg)
-
 
 ## Introduction
 This is a simple dart web app to mix a predefined set of colors.
